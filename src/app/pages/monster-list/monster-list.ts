@@ -4,6 +4,7 @@ import { PlayingCardComponent } from '../../components/playing-card/playing-card
 import { Monster } from "../../models/monster.model";
 import { CommonModule } from '@angular/common';
 import { MonsterService } from '../../services/monster/monster';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-monster-list',
@@ -14,18 +15,19 @@ import { MonsterService } from '../../services/monster/monster';
 export class MonsterList {
   monsters = signal<Monster[]>([]);
   search = model('');
+  private router = inject(Router);
   filteredMonsters = computed(()=>{
     return this.monsters().filter(monster => monster.name.includes(this.search()));
   })
-
-  monsterService = inject(MonsterService);
+  private monsterService = inject(MonsterService);
 
   constructor(){
     this.monsters.set(this.monsterService.getAll());
   }
   addMonster(){
-    const genericMonster = new Monster();
-    this.monsterService.add(genericMonster);
-    this.monsters.set(this.monsterService.getAll());
+    this.router.navigate(['monster']);
+  }
+  openMonster(monster: Monster){
+    this.router.navigate(['monster', monster.id]);
   }
 }

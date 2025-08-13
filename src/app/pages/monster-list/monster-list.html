@@ -1,7 +1,7 @@
 <app-search-bar [(search)]="search"></app-search-bar>
 <div id="card-list">
   @for (monster of filteredMonsters(); track monster) {
-    <app-playing-card [monster]="monster"/>
+    <app-playing-card [monster]="monster" (click)="openMonster(monster)"/>
   }@empty {
     <div class="center">No monsters found !</div>
   }
@@ -11,5 +11,5 @@
   <div class="center">Found {{filteredMonsters().length}} monster!</div>
 }
 <div class="centered">
-  <button (click)="addMonster()">Add Generic Monster</button>
+  <button (click)="addMonster()">Add Monster</button>
 </div>

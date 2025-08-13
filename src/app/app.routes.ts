@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { MonsterList } from './pages/monster-list/monster-list';
-import { Monster } from './pages/monster/monster';
+import { MonsterComponent } from './pages/monster/monster.component';
 import { NotFound } from './pages/not-found/not-found';
 export const routes: Routes = [
   {
@@ -13,15 +13,12 @@ export const routes: Routes = [
     component: MonsterList
   },
   {
+    path: 'monster/:id',
+    component: MonsterComponent
+  },
+  {
     path: 'monster',
-    children:[ {
-      path:'monster/:id',
-      component:Monster
-    },
-    {
-      path:'',
-      component:Monster
-    }]
+    component: MonsterComponent
   },
   {
     path:'**',

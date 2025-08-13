@@ -14,3 +14,6 @@ h1{background-color: black; color: white;}
   margin: 40px;
   text-align: center;
 }
+app-playing-card{
+  cursor: pointer;
+}

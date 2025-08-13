@@ -1,59 +1,75 @@
-# PlayingCards
+# Playing-Cards: Créateur de Cartes Pokémon
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.5.
+Ce projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version 20.1.5.
 
-## Development server
+## À propos du projet
 
-To start a local development server, run:
+Playing-Cards est une application web qui permet aux utilisateurs de créer et personnaliser leurs propres cartes Pokémon. Les utilisateurs peuvent:
+- Créer des monstres personnalisés
+- Définir leurs caractéristiques (points de vie, attaques, type)
+- Importer des images personnalisées
+- Sauvegarder leur collection de cartes
+
+## Technologies utilisées
+
+- **Frontend**: Angular 20, TypeScript, HTML5, CSS3
+- **State Management**: Signal API d'Angular
+- **Styling**: CSS personnalisé
+- **Formulaires**: Angular Reactive Forms
+- **Stockage**: LocalStorage (persistence côté client)
+
+## Développement
+
+Pour démarrer le serveur de développement:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Une fois le serveur en cours d'exécution, ouvrez votre navigateur et accédez à `http://localhost:4200/`. L'application se rechargera automatiquement chaque fois que vous modifiez l'un des fichiers source.
 
-## Code scaffolding
+## Génération de code
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Angular CLI comprend des outils puissants de génération de code. Pour générer un nouveau composant, exécutez:
 
 ```bash
-ng generate component component-name
+ng generate component nom-du-composant
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Pour une liste complète des schémas disponibles (tels que `components`, `directives` ou `pipes`), exécutez:
 
 ```bash
 ng generate --help
 ```
 
-## Building
+## Construction
 
-To build the project run:
+Pour construire le projet, exécutez:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Cela compilera votre projet et stockera les artefacts de construction dans le répertoire `dist/`. Par défaut, la construction en production optimise votre application pour la performance et la vitesse.
 
-## Running unit tests
+## Exécution des tests unitaires
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Pour exécuter des tests unitaires avec le framework de test [Karma](https://karma-runner.github.io), utilisez la commande suivante:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+## Exécution des tests de bout en bout
 
-For end-to-end (e2e) testing, run:
+Pour les tests de bout en bout (e2e), exécutez:
 
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Angular CLI ne fournit pas de framework de test de bout en bout par défaut. Vous pouvez en choisir un qui convient à vos besoins.
 
-## Additional Resources
+## Ressources supplémentaires
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Pour plus d'informations sur l'utilisation d'Angular CLI, y compris des références détaillées des commandes, visitez la page [Aperçu et Référence des Commandes Angular CLI](https://angular.dev/tools/cli).
